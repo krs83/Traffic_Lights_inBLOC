@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:traffic_lights_in_bloc/utility/constants.dart';
 
 class ColorButtons extends StatelessWidget {
   final String? tooltip;
@@ -26,23 +27,19 @@ class ColorButtons extends StatelessWidget {
 }
 
 class ColorContainer extends StatelessWidget {
+  final Color color;
+
   const ColorContainer({
     Key? key,
     required this.color,
   }) : super(key: key);
 
-  final Color color;
-
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
-
-      /// todo: add to constants
-      width: 100,
-      height: 100,
-
-      /// Todo: change color to variable
+      width: containerWidth,
+      height: containerHeight,
       color: color,
     );
   }

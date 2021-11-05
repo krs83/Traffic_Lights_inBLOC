@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:traffic_lights_in_bloc/bloc/traffic_lights_bloc.dart';
 import 'package:traffic_lights_in_bloc/screen/traffic_lights_screen.dart';
+import 'package:traffic_lights_in_bloc/utility/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (BuildContext context) => TrafficLightsBloc(),
-        child: const TrafficLightsScreen(
-            title: 'Traffic Light switching buttons in BLOC'),
+        child: const TrafficLightsScreen(title: appTitle),
       ),
     );
   }

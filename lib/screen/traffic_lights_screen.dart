@@ -21,6 +21,7 @@ class _TrafficLightsScreenState extends State<TrafficLightsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
@@ -37,19 +38,19 @@ class _TrafficLightsScreenState extends State<TrafficLightsScreen> {
         children: [
           ColorButtons(
             color: red,
-            tooltip: 'red color',
+            tooltip: redTip,
             onPressed: () => _bloc.add(Red()),
           ),
           const SizedBox(width: 10.0),
           ColorButtons(
             color: yellow,
-            tooltip: 'yellow color',
+            tooltip: yellowTip,
             onPressed: () => _bloc.add(Yellow()),
           ),
           const SizedBox(width: 10.0),
           ColorButtons(
             color: green,
-            tooltip: 'green color',
+            tooltip: greenTip,
             onPressed: () => _bloc.add(Green()),
           ),
         ],

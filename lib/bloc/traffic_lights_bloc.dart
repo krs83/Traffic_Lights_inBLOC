@@ -7,7 +7,7 @@ import 'package:traffic_lights_in_bloc/utility/constants.dart';
 part 'traffic_lights_event.dart';
 
 class TrafficLightsBloc extends Bloc<TrafficLightsEvent, Color> {
-  TrafficLightsBloc() : super(Colors.green) {
+  TrafficLightsBloc() : super(green) {
     on<Red>((event, emit) => emit(red));
     on<Yellow>((event, emit) => emit(yellow));
     on<Green>((event, emit) => emit(green));
