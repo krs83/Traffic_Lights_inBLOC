@@ -17,7 +17,7 @@ class TrafficLightsScreen extends StatefulWidget {
 class _TrafficLightsScreenState extends State<TrafficLightsScreen> {
   @override
   Widget build(BuildContext context) {
-    TrafficLightsBloc _bloc = BlocProvider.of<TrafficLightsBloc>(context);
+    TrafficLightsBloc _bloc = context.read<TrafficLightsBloc>();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -56,5 +56,11 @@ class _TrafficLightsScreenState extends State<TrafficLightsScreen> {
         ],
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    TrafficLightsBloc().close();
+    super.dispose();
   }
 }
